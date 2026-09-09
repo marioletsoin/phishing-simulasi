@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -180,14 +181,12 @@
             font-weight: 700;
 
             background:
-                radial-gradient(
-                    circle at 30% 110%,
+                radial-gradient(circle at 30% 110%,
                     #ffd600 0 20%,
                     #ff7a00 37%,
                     #ff0169 58%,
                     #d300c5 75%,
-                    #7638fa 100%
-                );
+                    #7638fa 100%);
         }
 
 
@@ -300,6 +299,15 @@
             font-size: 22px;
 
             font-weight: 600;
+        }
+
+        .username a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .username a:hover {
+            text-decoration: underline;
         }
 
 
@@ -622,10 +630,13 @@
 
 
                 <!-- USERNAME -->
+                <!-- Username diklik akan membuka profil Instagram asli -->
 
                 <div class="username">
 
-                    evanitamanullang
+                    <a href="https://www.instagram.com/evanitamanullang/" target="_blank">
+                        evanitamanullang
+                    </a>
 
                     <span class="simulation-label">
                         [SIMULASI]
@@ -696,16 +707,9 @@
 
 
                 <!-- BUTTON -->
+                <!-- Tombol mengarah ke halaman prank di GitHub Pages -->
 
-                <!--
-                    Untuk pengujian lokal tombol menuju
-                    halaman prank yang ada di komputer.
-                -->
-
-                <a
-                    class="button"
-                    href="http://localhost:8000/prank.html"
-                >
+                <a class="button" href="https://marioletsoin.github.io/phishing-simulasi/prank.html">
                     Secure your account
                 </a>
 
@@ -752,4 +756,5 @@
 
 
 </body>
+
 </html>

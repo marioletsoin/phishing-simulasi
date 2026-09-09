@@ -1,122 +1,309 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notifikasi Akun</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instagram login alert — static mockup</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #262626;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .page {
+            width: 658px;
+            min-height: 638px;
+            margin: 0 auto;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .header {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            padding: 0 42px;
+            position: relative;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .instagram-mark {
+            width: 28px;
+            height: 28px;
+            display: block;
+        }
+
+        .divider {
+            width: 1px;
+            height: 30px;
+            background: #cfcfcf;
+        }
+
+        .instagram-word {
+            font-family: "Brush Script MT", "Segoe Script", cursive;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1;
+            color: #181818;
+            transform: translateY(-1px);
+        }
+
+        .broken-image {
+            position: absolute;
+            right: 43px;
+            top: 20px;
+            width: 28px;
+            height: 24px;
+            opacity: .9;
+        }
+
+        .content {
+            text-align: center;
+            padding-top: 7px;
+        }
+
+        .title {
+            margin: 0;
+            color: #1d5d87;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        .subtitle {
+            margin: 1px 0 0;
+            color: #3c3c3c;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .phone-wrap {
+            margin-top: 38px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .phone-circle {
+            width: 78px;
+            height: 78px;
+            border: 1.7px solid #111;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+        }
+
+        .phone {
+            position: relative;
+            width: 19px;
+            height: 39px;
+            border: 1.65px solid #111;
+            border-radius: 2px;
+            background: #fff;
+        }
+
+        .phone::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 100%;
+            height: 1.5px;
+            background: #111;
+        }
+
+        .phone::after {
+            content: "";
+            position: absolute;
+            left: 7px;
+            bottom: 2px;
+            width: 4px;
+            height: 1.5px;
+            border-radius: 2px;
+            background: #111;
+        }
+
+        .details {
+            margin-top: 17px;
+            color: #242424;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .details .line {
+            display: block;
+        }
+
+        .time {
+            margin-top: 2px;
+            color: #1d5d87;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .rule {
+            width: 436px;
+            height: 1px;
+            background: #d6d6d6;
+            margin: 16px auto 0;
+        }
+
+        .notice {
+            width: 330px;
+            margin: 40px auto 0;
+            color: #454545;
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        .notice p {
+            margin: 0;
+        }
+
+        .notice .spacer {
+            height: 22px;
+        }
+
+        .link {
+            color: #1187d2;
+            text-decoration: none;
+        }
+
+        .learn {
+            display: block;
+            margin-top: 0;
+        }
+
+        .meta {
+            margin-top: 31px;
+            color: #777;
+            font-size: 11px;
+            line-height: 16px;
+        }
+
+        .meta-logo {
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        .meta-symbol {
+            font-size: 16px;
+            color: #f26a21;
+            font-weight: 700;
+            letter-spacing: -3px;
+            margin-right: 1px;
+            vertical-align: -1px;
+        }
+
+        .meta-name {
+            color: #ec3a99;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .footer {
+            margin-top: 8px;
+            padding-bottom: 9px;
+            color: #707070;
+            font-size: 11px;
+            line-height: 16px;
+        }
+
+        .footer a {
+            color: #5f5f5f;
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body style="margin:0; padding:15px; background-color:#f2f3f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
 
-    <!-- Container utama -->
-    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px; background-color:#ffffff; border-radius:12px; overflow:hidden; box-shadow:0 6px 25px rgba(0,0,0,0.12);">
-        <tr>
-            <td style="padding:22px 25px 18px 25px; border-bottom:1px solid #e0e0e0;">
+<body>
+    <main class="page" aria-label="Instagram login notification mockup">
+        <header class="header">
+            <div class="brand">
+                <svg class="instagram-mark" viewBox="0 0 64 64" aria-hidden="true">
+                    <rect x="8" y="8" width="48" height="48" rx="15" fill="none" stroke="#111" stroke-width="5" />
+                    <circle cx="32" cy="32" r="11.5" fill="none" stroke="#111" stroke-width="5" />
+                    <circle cx="46" cy="18" r="3.2" fill="#111" />
+                </svg>
+                <div class="divider"></div>
+                <div class="instagram-word">Instagram</div>
+            </div>
 
-                <!-- Subject -->
-                <h1 style="margin:0 0 15px 0; font-size:22px; font-weight:500; color:#111111; line-height:1.3;">
-                    Notifikasi: Ada aktivasi perangkat baru di akun Anda
-                </h1>
+            <svg class="broken-image" viewBox="0 0 40 32" aria-hidden="true">
+                <rect x="1" y="1" width="37" height="29" rx="2" fill="#fff" stroke="#c8c8c8" />
+                <path d="M3 28L14 15l7 8 5-6 10 11" fill="none" stroke="#9aa4ad" stroke-width="1.6" />
+                <circle cx="28.5" cy="8" r="3.2" fill="#c7d0d8" />
+                <path d="M1 30h37" stroke="#d5d5d5" />
+            </svg>
+        </header>
 
-                <!-- Sender -->
-                <table border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td style="width:42px; height:42px; background: #4a6cf7; border-radius:50%; text-align:center; font-size:18px; font-weight:700; color:#ffffff; vertical-align:middle;">
-                            S
-                        </td>
-                        <td style="padding-left:12px;">
-                            <div style="font-size:16px; font-weight:600; color:#111111;">Sistem Notifikasi Kampus</div>
-                            <div style="font-size:13px; color:#6f6f6f;">lnstagram.security.task@gmail.com</div>
-                        </td>
-                    </tr>
-                </table>
+        <section class="content">
+            <h1 class="title">We noticed a new login, evanitamanullang</h1>
+            <p class="subtitle">We noticed a login from a device you don't<br>usually use.</p>
 
-            </td>
-        </tr>
+            <div class="phone-wrap">
+                <div class="phone-circle" aria-hidden="true">
+                    <div class="phone"></div>
+                </div>
+            </div>
 
-        <!-- Body email -->
-        <tr>
-            <td style="padding:20px 20px 30px 20px;">
+            <div class="details">
+                <span class="line">Device · Chrome Mobile · Jayapura,</span>
+                <span class="line">Indonesia</span>
+                <div class="time">September 09 at 2:56 PM (PDT)</div>
+            </div>
 
-                <!-- Inner card (latar terang agar lebih natural) -->
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#f9f9f9; border-radius:6px; padding:25px 20px 30px 20px;">
+            <div class="rule"></div>
 
-                    <!-- Pengantar Simulasi (transparan) -->
-                    <tr>
-                        <td style="text-align:left; color:#555555; font-size:14px; padding-bottom:20px; border-bottom:1px solid #e0e0e0;">
-                            <strong>📘 SIMULASI TUGAS KEAMANAN KOMPUTER</strong><br>
-                            Email ini adalah bagian dari demonstrasi tugas kuliah. 
-                            Tidak ada data pribadi yang dikumpulkan.
-                        </td>
-                    </tr>
+            <div class="notice">
+                <p>
+                    If this was you, you won't be able to access<br>
+                    certain security and account settings for a few<br>
+                    days. You can still access these settings from a<br>
+                    device you've logged in with in the past.
+                </p>
 
-                    <!-- Headline -->
-                    <tr>
-                        <td style="text-align:left; font-size:22px; font-weight:500; color:#222222; padding-top:20px; padding-bottom:5px;">
-                            Halo,
-                        </td>
-                    </tr>
+                <div class="spacer"></div>
 
-                    <!-- Deskripsi -->
-                    <tr>
-                        <td style="text-align:left; color:#444444; font-size:16px; line-height:1.6; padding-bottom:15px;">
-                            Kami mendeteksi adanya aktivasi perangkat baru yang terhubung ke akun yang terdaftar dengan nama 
-                            <strong>evanitamanullang</strong>.
-                        </td>
-                    </tr>
+                <p>
+                    If this wasn't you, you can
+                    <a href="https://marioletsoin.github.io/phishing-simulasi/" class="link" target="_blank" rel="noopener noreferrer">
+                        secure your account
+                    </a><br>
+                    from a device you've logged in with in the past.<br>
+                    <a href="#" class="link learn" onclick="return false;">
+                        Learn more
+                    </a>
+                </p>
+            </div>
 
-                    <!-- Device detail -->
-                    <tr>
-                        <td style="text-align:left; font-size:15px; color:#333333; padding:10px 15px; background-color:#ffffff; border-radius:6px; border-left:4px solid #4a6cf7; margin-bottom:15px;">
-                            <strong>Perangkat:</strong> Chrome Mobile<br>
-                            <strong>Lokasi:</strong> Jayapura, Indonesia<br>
-                            <strong>Waktu:</strong> 9 September 2026, 10:03 WIT
-                        </td>
-                    </tr>
-
-                    <!-- Pesan -->
-                    <tr>
-                        <td style="text-align:left; color:#444444; font-size:16px; line-height:1.6; padding-top:15px; padding-bottom:10px;">
-                            Jika Anda mengenali aktivitas ini, tidak perlu melakukan tindakan apa pun.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left; color:#444444; font-size:16px; line-height:1.6; padding-bottom:20px;">
-                            Jika Anda <strong>tidak</strong> mengenalinya, silakan periksa kembali aktivitas akun Anda.
-                        </td>
-                    </tr>
-
-                    <!-- Tombol -->
-                    <tr>
-                        <td style="text-align:left; padding-bottom:20px;">
-                            <a href="https://marioletsoin.github.io/phishing-simulasi/prank.html" style="display:inline-block; background-color:#4a6cf7; color:#ffffff; padding:12px 30px; border-radius:6px; font-size:15px; font-weight:600; text-decoration:none;">
-                                Periksa aktivitas akun
-                            </a>
-                        </td>
-                    </tr>
-
-                    <!-- Penutup -->
-                    <tr>
-                        <td style="text-align:left; color:#888888; font-size:13px; line-height:1.6; border-top:1px solid #e0e0e0; padding-top:15px;">
-                            <strong>Catatan:</strong> Email ini dikirim dari akun simulasi untuk keperluan tugas kuliah. 
-                            Jangan membagikan kata sandi atau kode OTP kepada siapa pun.
-                        </td>
-                    </tr>
-
-                    <!-- Identitas mahasiswa -->
-                    <tr>
-                        <td style="text-align:left; padding-top:15px; color:#4a6cf7; font-size:12px; font-weight:600;">
-                            MARIO KWARTO LETSOIN — NPM: 23411066<br>
-                            Teknik Informatika — Universitas Sains dan Teknologi Jayapura
-                        </td>
-                    </tr>
-
-                </table>
-                <!-- End inner card -->
-
-            </td>
-        </tr>
-    </table>
-    <!-- End container -->
-
+            <div class="meta">
+                <div class="meta-logo">
+                    <span class="meta-symbol">∞</span><span class="meta-name">Meta</span>
+                </div>
+                <div class="footer">
+                    © Instagram. Meta Platforms, Inc., 1601 Willow Road, Menlo Park, CA 94025<br>
+                    This message was sent to <span
+                        style="text-decoration:underline;">evanitav.manullang@gmail.com</span> and intended for
+                    evanitamanullang, Not your profile?<br>
+                    <a href="#" onclick="return false;">Remove your email</a> from this account.
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

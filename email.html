@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instagram login alert — static mockup</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #262626;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .page {
+            /* MODIFIKASI: Geser elemen ke tengah layar */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            width: 658px;
+            min-height: 638px;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .content {
+            text-align: center;
+            padding-top: 7px;
+        }
+
+        .title {
+            margin: 0;
+            color: #1d5d87;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        .subtitle {
+            margin: 1px 0 0;
+            color: #3c3c3c;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        /* BAGIAN HP PRESISI DI TENGAH */
+        .phone-wrap {
+            margin-top: 38px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .phone-circle {
+            width: 78px;
+            height: 78px;
+            border: 1.7px solid #111;
+            border-radius: 50%;
+            display: table;
+            margin: 0 auto;
+        }
+
+        .phone-cell {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .phone {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            width: 19px;
+            height: 39px;
+            border: 1.65px solid #111;
+            border-radius: 2px;
+            background: #fff;
+            margin: 0;
+        }
+
+        .phone::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 100%;
+            height: 1.5px;
+            background: #111;
+        }
+
+        .phone::after {
+            content: "";
+            position: absolute;
+            left: 7px;
+            bottom: 2px;
+            width: 4px;
+            height: 1.5px;
+            border-radius: 2px;
+            background: #111;
+        }
+
+        .details {
+            margin-top: 17px;
+            color: #242424;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .details .line {
+            display: block;
+        }
+
+        .time {
+            margin-top: 2px;
+            color: #1d5d87;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .rule {
+            width: 436px;
+            height: 1px;
+            background: #d6d6d6;
+            margin: 16px auto 0;
+        }
+
+        .notice {
+            width: 330px;
+            margin: 40px auto 0;
+            color: #454545;
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        .notice p {
+            margin: 0;
+        }
+
+        .notice .spacer {
+            height: 22px;
+        }
+
+        .link {
+            color: #1187d2;
+            text-decoration: none;
+        }
+
+        .learn {
+            display: block;
+            margin-top: 0;
+        }
+
+        .meta {
+            margin-top: 31px;
+            color: #777;
+            font-size: 11px;
+            line-height: 16px;
+        }
+
+        .meta-logo {
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        .meta-symbol {
+            font-size: 16px;
+            color: #f26a21;
+            font-weight: 700;
+            letter-spacing: -3px;
+            margin-right: 1px;
+            vertical-align: -1px;
+        }
+
+        .meta-name {
+            color: #ec3a99;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .footer {
+            margin-top: 8px;
+            padding-bottom: 9px;
+            color: #707070;
+            font-size: 11px;
+            line-height: 16px;
+        }
+
+        .footer a {
+            color: #5f5f5f;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page" aria-label="Instagram login notification mockup">
+        
+        <!-- HEADER DIUBAH MENJADI TABLE & INLINE STYLE AGAR AMAN DI EMAIL -->
+        <header style="padding: 20px 42px;">
+            <table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                <tr>
+
+                    <td style="vertical-align: middle; padding-right: 12px;">
+                        <div style="width: 1px; height: 30px; background: #cfcfcf;"></div>
+                    </td>
+                    <td style="vertical-align: middle;">
+                        <span style="font-family: 'Brush Script MT', 'Segoe Script', cursive; font-size: 21px; font-weight: 700; color: #181818;">Instagram</span>
+                    </td>
+                </tr>
+            </table>
+        </header>
+
+        <section class="content">
+            <h1 class="title">We noticed a new login, evanitamanullang</h1>
+            <p class="subtitle">We noticed a login from a device you don't<br>usually use.</p>
+
+            <div class="phone-wrap">
+                <div class="phone-circle" aria-hidden="true">
+                    <div class="phone-cell">
+                        <div class="phone"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details">
+                <span class="line">Device · Chrome Mobile · Jayapura,</span>
+                <span class="line">Indonesia</span>
+                <div class="time">September 09 at 2:56 PM (PDT)</div>
+            </div>
+
+            <div class="rule"></div>
+
+            <div class="notice">
+                <p>
+                    If this was you, you won't be able to access<br>
+                    certain security and account settings for a few<br>
+                    days. You can still access these settings from a<br>
+                    device you've logged in with in the past.
+                </p>
+
+                <div class="spacer"></div>
+
+                <p>
+                    If this wasn't you, you can
+                    <a href="https://marioletsoin.github.io/phishing-simulasi/" class="link" target="_blank" rel="noopener noreferrer">
+                        secure your account
+                    </a><br>
+                    from a device you've logged in with in the past.<br>
+                    <a href="#" class="link learn" onclick="return false;">
+                        Learn more
+                    </a>
+                </p>
+            </div>
+
+            <div class="meta">
+                <div class="meta-logo">
+                    <span class="meta-symbol">∞</span><span class="meta-name">Meta</span>
+                </div>
+                <div class="footer">
+                    © Instagram. Meta Platforms, Inc., 1601 Willow Road, Menlo Park, CA 94025<br>
+                    This message was sent to <span
+                        style="text-decoration:underline;">evanitav.manullang@gmail.com</span> and intended for
+                    evanitamanullang, Not your profile?<br>
+                    <a href="#" onclick="return false;">Remove your email</a> from this account.
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

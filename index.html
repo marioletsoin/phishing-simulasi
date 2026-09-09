@@ -20,9 +20,14 @@
         }
 
         .page {
+            /* MODIFIKASI DI SINI: Geser elemen ke tengah layar */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
             width: 658px;
             min-height: 638px;
-            margin: 0 auto;
             background: #fff;
             overflow: hidden;
         }
@@ -91,10 +96,10 @@
             line-height: 18px;
         }
 
+        /* BAGIAN YANG DIUBAH: Menghilangkan flex dan mengganti dengan margin auto */
         .phone-wrap {
             margin-top: 38px;
-            display: flex;
-            justify-content: center;
+            width: 100%;
         }
 
         .phone-circle {
@@ -102,12 +107,17 @@
             height: 78px;
             border: 1.7px solid #111;
             border-radius: 50%;
-            display: grid;
-            place-items: center;
+            display: block;
+            margin: 0 auto; /* Ini yang membuat elemen HP berada di tengah */
+            position: relative;
         }
+        /* AKHIR BAGIAN YANG DIUBAH */
 
         .phone {
-            position: relative;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             width: 19px;
             height: 39px;
             border: 1.65px solid #111;
